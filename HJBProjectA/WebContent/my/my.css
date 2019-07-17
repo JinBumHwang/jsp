@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.mylarge{
+	margin-left:1.5rem;
+	font-size:1.6rem;
+}
+.mymedium{
+	margin-left:1.5rem;
+	font-size:1.5rem;
+}
+.mybody{
+	position:absolute;
+    background-image: url('../images/b1.jpg');
+	background-position: left top;
+	background-repeat: repeat;
+	background-size: cover;
+	background-attachment:fixed;
+	width:100%;
+	height:100%;
+}
