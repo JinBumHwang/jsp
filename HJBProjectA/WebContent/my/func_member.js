@@ -16,18 +16,18 @@ function checkDateFromYear() { // "년"이동시 2월이면 변경될 수 있음
 
 function checkDate(val) { // 28일 29일 30일 31일 결정
 	switch (val) {
-	case '1':
-	case '3':
-	case '5':
-	case '7':
-	case '8':
+	case '01':
+	case '03':
+	case '05':
+	case '07':
+	case '08':
 	case '10':
 	case '12':
 		dateAble(29);
 		dateAble(30);
 		dateAble(31);
 		break;
-	case '2':
+	case '02':
 		var year = document.getElementById("year").value;
 		var maxDay;
 		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
