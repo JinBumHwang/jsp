@@ -1,0 +1,12 @@
+
+1. iframe을 활용하여 페이지를 이동하지 않고 처리하는 페이지, form의 target을 iframe으로 설정하여 처리
+   iframe의 width, height는 0으로 설정{
+board_modiPro
+thumbPro
+reply_addPro
+reply_delPro
+}
+
+2. 제출용은 
+mail.SMTPAuthenticatior.java
+의 비밀번호 숨기기

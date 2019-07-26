@@ -11,14 +11,12 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item mymedium"><a class="nav-link"
-					href="info.jsp"> Info </a></li>
+<!-- 				<li class="nav-item mymedium"><a class="nav-link" -->
+<!-- 					href="info.jsp"> Info </a></li> -->
 				<li class="nav-item mymedium"><a class="nav-link"
 					href="board.jsp"> Board </a></li>
 				<li class="nav-item mymedium"><a class="nav-link"
 					href="gallery.jsp"> Gallery </a></li>
-				<!-- 				<li class="nav-item mymedium"><a class="nav-link" href="resources.jsp"> -->
-				<!-- 						Resources </a></li> -->
 			</ul>
 			<ul class="navbar-nav">
 				<%
@@ -31,7 +29,8 @@
 				<%
 					} else {
 				%>
-				<li class="nav-item small my-auto text-white"><%=session.getAttribute("name") %>님 로그인 중..</li>
+				<li class="nav-item small my-auto text-white"><%=session.getAttribute("name")%>님
+					로그인 중..</li>
 				<li class="nav-item mymedium"><a class="nav-link"
 					href="modify.jsp">Modify</a></li>
 				<li class="nav-item mymedium"><a class="nav-link"

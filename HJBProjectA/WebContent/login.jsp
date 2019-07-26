@@ -21,47 +21,46 @@
 			}
 		}
 	}
+	// 쿠키로 Remeber Me 체크값 조회
 	id = request.getParameter("id") == null ? id : request.getParameter("id");
 %>
 <body class="text-center mybody">
 	<form class="form-signin bg-light mx-auto p-5  rounded-lg mt-5"
-		action="loginPro.jsp" method="POST" style="width: 40%;min-width:600px">
+		action="loginPro.jsp" method="POST"
+		style="width: 40%; min-width: 600px">
 		<img class="mb-4 rounded-lg" src="images/b1.jpg" width="80%">
 		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 		<label for="id" class="sr-only">ID</label> <input type="text"
 			onkeydown="checkText(this)" onkeyup="checkText(this)" id="id"
 			name="id" class="form-control" placeholder="ID" required
-			<%if(id==null){%>autofocus<%}%>
-			value="<%=id==null?"":id%>">
+			<%if (id == null) {%> autofocus <%}%> value="<%=id == null ? "" : id%>">
 		<label for="pw" class="sr-only">Password</label> <input
 			type="password" id="pw" name="pw" class="form-control"
-			placeholder="Password" required
-			<%if(id!=null){%>autofocus<%}%>>
+			placeholder="Password" required <%if (id != null) {%> autofocus <%}%>>
 		<div class="checkbox m-3">
 			<label> <input type="checkbox" name="remember"
-			<%if(id!=null){%>checked<%}%>>
-				Remember me
+				<%if (id != null) {%> checked <%}%>> Remember me
 			</label>
 		</div>
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
 			in</button>
-	<p class="mt-5 mb-3 text-muted">© 2017-2019</p>
-	<ul class="list-inline">
-		<li class="list-inline-item"><a href="index.jsp">Home</a></li>
-		<li class="list-inline-item">|</li>
-		<li class="list-inline-item"><a href="join.jsp">Join</a></li>
-	</ul>
+		<p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+		<ul class="list-inline">
+			<li class="list-inline-item"><a href="index.jsp">Home</a></li>
+			<li class="list-inline-item">|</li>
+			<li class="list-inline-item"><a href="join.jsp">Join</a></li>
+		</ul>
 	</form>
 
 
 </body>
 <script>
-function checkText(obj) {
-    var RegExp = /[ \{\}\[\]\/?.,;:|\)*~`!^\-+┼<>@\#$%&\'\"\\\(\=]/gi;//정규식
-    if (RegExp.test(obj.value)) {
-        obj.value = obj.value.substring(0, obj.value.length - 1);//최신 한 글자 지우기
-    }
-}
+	function checkText(obj) { // 특수문자 제외
+		var RegExp = /[ \{\}\[\]\/?.,;:|\)*~`!^\-+┼<>@\#$%&\'\"\\\(\=]/gi;//정규식
+		if (RegExp.test(obj.value)) {
+			obj.value = obj.value.substring(0, obj.value.length - 1);//최신 한 글자 지우기
+		}
+	}
 </script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

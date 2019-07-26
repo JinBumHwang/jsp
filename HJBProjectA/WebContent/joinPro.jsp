@@ -11,7 +11,7 @@
 
 	dto.setAddress(request.getParameter("address"));
 	dto.setDetailAddr(request.getParameter("detailAddr"));
-	dto.setBirth(request.getParameter("year")+request.getParameter("month")+request.getParameter("date"));
+	dto.setBirth(request.getParameter("year") + request.getParameter("month") + request.getParameter("date"));
 	dto.setEmail(request.getParameter("email"));
 	dto.setGender(request.getParameter("gender"));
 	dto.setId(request.getParameter("id"));
@@ -25,15 +25,15 @@
 		response.addHeader("Refresh", "1;url=index.jsp");
 		session.setAttribute("id", dto.getId());
 		session.setAttribute("name", dto.getName());
-		%>
-		<div class="alert alert-success mt-5 p-5" role="alert"><%=dto.getName()%>님
-			환영합니다.
-		</div>
-		<%
+%>
+<div class="alert alert-success mt-5 p-5" role="alert"><%=dto.getName()%>님
+	환영합니다.
+</div>
+<%
 	} else {
 		response.addHeader("Refresh", "1;url=join.jsp");
-		%>
-		<div class="alert alert-danger mt-5 p-5" role="alert">회원가입 오류!!</div>
-		<%
+%>
+<div class="alert alert-warning mt-5 p-5" role="alert">회원가입 오류!!</div>
+<%
 	}
-		%>
+%>

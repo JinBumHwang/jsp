@@ -13,18 +13,19 @@
 
 </head>
 <body class="mybody">
-<%
-	MemberDAO dao=new MemberDAO();
-%>
+	<%
+		MemberDAO dao = new MemberDAO();
+	%>
 	<form method="post" action="joinPro.jsp"
 		class="form-signin bg-light mx-auto p-5  rounded-lg mt-5 needs-validation"
-		novalidate style="width: 40%;min-width:600px">
+		novalidate style="width: 40%; min-width: 600px">
 
 		<div class="mb-2">
-			<label class="ml-3" for="id">ID</label> <input type="text" onkeydown="checkText(this)"
-			onkeyup="checkText(this)" onchange="selectId('<%=dao.selectAll() %>')"
-				class="form-control" id="id" name="id" placeholder="ID" required>
-		<p class="text-danger ml-2 mb-1" id="msgId"></p>
+			<label class="ml-3" for="id">ID</label> <input type="text"
+				onkeydown="checkText(this)" onkeyup="checkText(this)"
+				onchange="selectId('<%=dao.selectAll()%>')" class="form-control"
+				id="id" name="id" placeholder="ID" required>
+			<p class="text-danger ml-2 mb-1" id="msgId"></p>
 		</div>
 
 		<div class="mb-1">
@@ -36,14 +37,13 @@
 			<label class="ml-3" for="pwr">Password repeat</label> <input
 				type="password" class="form-control" id="pwr" onchange="checkPwr()"
 				name="pwr" placeholder="Password repeat" required>
-		<p class="text-danger ml-2 mb-1" id="msgPwr"></p>
+			<p class="text-danger ml-2 mb-1" id="msgPwr"></p>
 		</div>
-		
+
 		<div class="mb-3">
 			<label class="ml-3" for="name">Name</label> <input type="text"
-				class="form-control" id="name" name="name" placeholder="Name" onkeyup="checkText(this)"
-				onkeydown="checkText(this)"
-				required>
+				class="form-control" id="name" name="name" placeholder="Name"
+				onkeyup="checkText(this)" onkeydown="checkText(this)" required>
 			<div class="invalid-feedback">이름을 입력하세요.</div>
 		</div>
 
@@ -111,7 +111,8 @@
 			</div>
 			<div class="col-md-3 mb-3">
 				<label class="ml-3" for="date">Gender</label> <select
-					class="custom-select d-block w-100" id="gender" name="gender" required>
+					class="custom-select d-block w-100" id="gender" name="gender"
+					required>
 					<option value="male">Male</option>
 					<option value="female">Female</option>
 				</select>
@@ -119,8 +120,7 @@
 		</div>
 
 		<div class="mb-3">
-			<label class="ml-3" for="email">Email <span
-				class="text-muted">(Optional)</span></label> <input type="email"
+			<label class="ml-3" for="email">Email</label> <input type="email"
 				class="form-control" id="email" name="email"
 				placeholder="you@abc.com">
 			<div class="invalid-feedback">올바른 이메일 주소를 입력해주세요</div>
@@ -142,9 +142,10 @@
 			</div>
 		</div>
 		<div class="mb-3">
-			<input class="form-control mb-1" type="text" id="address" name="address"
-				placeholder="Address" readonly> <input class="form-control"
-				type="text" id="detailAddr" name="detailAddr" placeholder="Detail Address">
+			<input class="form-control mb-1" type="text" id="address"
+				name="address" placeholder="Address" readonly> <input
+				class="form-control" type="text" id="detailAddress" name="detailAddr"
+				placeholder="Detail Address">
 		</div>
 
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
@@ -159,11 +160,11 @@
 		</div>
 	</form>
 
-<script src="my/searchAddress.js"></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="my/func_member.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="my/searchAddress.js"></script>
+	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+	<script src="my/func_member.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </body>
 </html>

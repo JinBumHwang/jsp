@@ -9,9 +9,10 @@ public class BoardDTO {
 	private String title;
 	private String content;
 	private int readcount;
-	private int likes;
-	private int reply;
+	private int thumbcount;
+	private int replycount; // db에 없는 항목 reply테이블 참조하여 값 설정
 	private Timestamp reg_date;
+	private String fileAddr;
 	public int getNum() {
 		return num;
 	}
@@ -48,22 +49,28 @@ public class BoardDTO {
 	public void setReadcount(int readcount) {
 		this.readcount = readcount;
 	}
-	public int getLikes() {
-		return likes;
+	public int getThumbcount() {
+		return thumbcount;
 	}
-	public void setLikes(int like) {
-		this.likes = like;
+	public void setThumbcount(int thumbcount) {
+		this.thumbcount = thumbcount;
 	}
-	public int getReply() {
-		return reply;
+	public int getReplycount() {
+		return replycount;
 	}
-	public void setReply(int reply) {
-		this.reply = reply;
+	public void setReplycount(int replycount) {
+		this.replycount = replycount;
 	}
 	public Timestamp getReg_date() {
 		return reg_date;
 	}
 	public void setReg_date(Timestamp reg_date) {
 		this.reg_date = reg_date;
+	}
+	public String getFileAddr() {
+		return fileAddr;
+	}
+	public void setFileAddr(String fileAddr) {
+		this.fileAddr = fileAddr;
 	}
 }
